@@ -70,6 +70,16 @@ public class ComplexTest {
     }
 
     @Test
+    void testEquals(){
+        Complex c1 = new Complex(-1,1);
+        Complex c2 = new Complex(1,-1);
+        Complex c3 = new Complex(-1,1);
+
+        assertEquals(false, c1.equals(c2));
+        assertEquals(true, c1.equals(c3));
+    }
+
+    @Test
     void testReciprocal(){
         assertEquals(Complex.ONE, Complex.ONE.reciprocal());
         assertEquals(Complex.I, minusI.reciprocal());
