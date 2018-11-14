@@ -138,6 +138,13 @@ public class ComplexTest {
     }
 
     @Test
+    void testAdd(){
+        assertEquals(Complex.ONE, Complex.ZERO.add(Complex.ONE));
+        assertEquals(new Complex(3,4),
+                new Complex(3,0).add(new Complex(0,4)));
+    }
+
+    @Test
     void testToString(){
         assertEquals("Complex { real = 1.0, imaginary = -1.0 }", oneMinusI.toString());
         assertEquals("Complex { real = "+real+", imaginary = "+imaginary+" }", new Complex(real, imaginary).toString());
