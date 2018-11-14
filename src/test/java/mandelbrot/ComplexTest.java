@@ -108,6 +108,13 @@ public class ComplexTest {
     }
 
     @Test
+    void testSquaredModulus(){
+        assertEquals(2.0, new Complex(1,1).squaredModulus());
+        assertEquals(0, Complex.ZERO.squaredModulus());
+        assertEquals(1, Complex.I.squaredModulus());
+    }
+
+    @Test
     void testDivide(){
         assertEquals(onePlusI, onePlusI.divide(Complex.ONE));
         assertEquals(new Complex(0.5, 0), Complex.ONE.divide(two));
