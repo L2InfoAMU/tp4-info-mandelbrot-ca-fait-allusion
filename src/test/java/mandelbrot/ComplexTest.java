@@ -115,10 +115,26 @@ public class ComplexTest {
     }
 
     @Test
+    void testModulus(){
+        assertEquals(Math.sqrt(2.0), new Complex(1,1).modulus());
+        assertEquals(0, Complex.ZERO.modulus());
+        assertEquals(1, Complex.I.modulus());
+    }
+
+    @Test
     void testDivide(){
         assertEquals(onePlusI, onePlusI.divide(Complex.ONE));
         assertEquals(new Complex(0.5, 0), Complex.ONE.divide(two));
         assertEquals(minusI,oneMinusI.divide(onePlusI));
+    }
+
+    @Test
+    void testPow(){
+        assertEquals(Complex.ONE, Complex.I.pow(0));
+        assertEquals(Complex.ONE, Complex.ONE.pow(1));
+        assertEquals(minusOne, Complex.I.pow(2));
+        assertEquals(new Complex(-644, -960),
+                new Complex(3,5).pow(4));
     }
 
     @Test
