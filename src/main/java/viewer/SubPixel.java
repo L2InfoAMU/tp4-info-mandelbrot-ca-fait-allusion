@@ -10,7 +10,7 @@ import javafx.scene.paint.Color;
 
 class SubPixel {
 
-    private Color color = Color.BLACK;
+    private Color color = Color.DARKGRAY;
 
     /**
      * Each subpixel has a value that will be used to color them.
