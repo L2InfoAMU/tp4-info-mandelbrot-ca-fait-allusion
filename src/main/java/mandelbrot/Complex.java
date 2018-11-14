@@ -92,7 +92,7 @@ public class Complex {
      * @return A complex <code>c</code> such that <code>this + c = 0</code>
      */
     Complex negate() {
-        return new Complex(-this.real, this.imaginary);
+        return new Complex(-this.real, -this.imaginary);
     }
 
     /**
@@ -222,9 +222,8 @@ public class Complex {
 
     @Override
     public String toString() {
-        return "Complex{" +
-                "real=" + imaginary +
-                ", imaginary=" + imaginary +
-                '}';
+        return "Complex { real = " + real +
+                ", imaginary = " + imaginary +
+                " }";
     }
 }
