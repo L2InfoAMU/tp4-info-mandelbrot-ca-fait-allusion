@@ -37,7 +37,7 @@ class Pixel {
         return subPixels;
     }
 
-
+    //Color management
     private Color getAverageColor() {
         double red = 0;
         double green = 0;
