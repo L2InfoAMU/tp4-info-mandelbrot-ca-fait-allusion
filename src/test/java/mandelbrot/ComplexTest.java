@@ -138,6 +138,12 @@ public class ComplexTest {
     }
 
     @Test
+    void testScale(){
+        assertEquals(new Complex(-4, 2), new Complex(2,-1).scale(-2));
+        assertEquals(Complex.ZERO, new Complex(38,2).scale(0));
+    }
+
+    @Test
     void testDivideByZero(){
         assertThrows(ArithmeticException.class, ()->Complex.ONE.divide(Complex.ZERO));
     }
